@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+<head>
+    <meta charset="UTF-8">
+    <title>index.HOME</title>
+    <link rel="stylesheet" href="exstyle.css">
+</head>
+<body>
+  <h1>홈페이지</h1>
+  <!-- 버튼 -->
+   <div id="top">
+  <p id="nightmode">
+    <input type="button" name="" value="야간모드" onclick="
+    document.querySelector('body').style.backgroundColor='black';
+    document.querySelector('body').style.color='white';
+    document.querySelector('h1').style.color='white';
+    document.querySelector('ol').style.color='white';
+    document.querySelector('a').style.color='white';">
+
+    <input type="button" name="" value="주간모드" onclick="
+    document.querySelector('body').style.backgroundColor='white';
+    document.querySelector('body').style.color='black'
+    document.querySelector('h1').style.color='white';
+    document.querySelector('ol').style.color='black';
+    document.querySelector('a').style.color='black';">
+
+    <button type="button" onclick="location.href='index.html';">홈</button>
+    </p>
+  <!--본문  -->
+  <div id="base">
+   <!-- <a>에 color가 적용되지않는 것을 좀 알아보기 -->
+    <ol id="menu">
+        <a href="index.html" style="color:blue;text-decoration:underline"><li><strong>Home</strong></li></a>
+        <a href="1.html"><li>HTML</li></a>
+        <a href="2.html"><li>Css</li></a>
+        <a href="(ex)javascript.html"><li>JavaScripts</li></a>
+        <a href="coding Study.html"><li>공부 요약본</li></a>
+    </ol>
+
+    <div id="judo">
+      <h2>시작하기</h2>
+      <br>
+      <!-- form은 복사한거 input은 내가해본거 -->
+      <form action="(ex)javascript.html">
+        <label for="fname">아이디</label>
+        <input type="text" id="fname" name="fname" size="50"><br><br>
+        <label for="pin">핀번호</label>
+        <input type="text" id="pin" name="pin" maxlength="4" size="50"><br><br>
+        <input type="submit" value="Submit">
+      </form>
+      <input type="button" value="hi" onclick="alert('시작해보기')" size="40"> <br><br>
+      <input type="text" onclick="alert('하하~')"> 
+       
+    </div>
+  </div>
+</div>
+</body>
+</html>
