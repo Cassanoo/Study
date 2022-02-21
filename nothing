@@ -2,25 +2,42 @@
 <html lang="ko-kr">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>JavaScriptEX</title>
     <link rel="stylesheet" href="exstyle.css">
 </head>
 <body>
   <h1>Javascripts</h1>
+  <!-- 버튼 -->
     <p id="nightmode">
     <input type="button" name="" value="야간모드" onclick="
-      document.querySelector('body').style.backgroundColor='black';
-      document.querySelector('body').style.color='white';
-      document.querySelector('h1').style.color='white';">
-
+    document.querySelector('body').style.backgroundColor='black';
+    document.querySelector('body').style.color='white';
+    document.querySelector('h1').style.color='white';
+    document.querySelector('ol').style.color='white';
+    document.querySelector('a').style.color='white';">
+    
     <input type="button" name="" value="주간모드" onclick="
-      document.querySelector('body').style.backgroundColor='white';
-      document.querySelector('body').style.color='black'
-      document.querySelector('h1').style.color='black';">
-      <button type="button" onclick="location.href='index.html';">홈</button>
-     </p>
+    document.querySelector('body').style.backgroundColor='white';
+    document.querySelector('body').style.color='black'
+    document.querySelector('h1').style.color='black';
+    document.querySelector('ol').style.color='black';
+    document.querySelector('a').style.color='black';">
 
-  <div class="judo" href="exstyle.css">
+    <button type="button" onclick="location.href='index.html';">홈</button>
+    </p>
+  <!--본문  -->
+  <div id="base">
+   <!-- <a>에 color가 적용되지않는 것을 좀 알아보기 -->
+  <ol>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="1.html"style="color:blue;text-decoration:underline"><strong>HTML</strong></a></li>
+      <li><a href="2.html">Css</a></li>
+      <li><a href="3.html">JavaScripts</a></li>
+      <li><a href="coding Study.html">공부 요약본</a></li>
+  </ol>
+
+  <div id="judo">
+    <h2>제목</h2>
     <p>모질라 재단의 프로토타입 기반의 프로그래밍 언어로, 스크립트 언어에 해당된다. 특수한 목적이 아닌 이상 모든 웹 브라우저에 인터프리터가 내장되어 있다. 오늘날 HTML, CSS와 함께 웹을 구성하는 요소 중 하나다.
     <br>HTML이 웹 페이지의 기본 구조를 담당하고, CSS가 디자인을 담당한다면 JavaScript는 클라이언트 단에서 웹 페이지가 동작하는 것을 담당한다.
     <br>웹 페이지를 자동차에 비유하자면, HTML은 자동차의 뼈대, CSS는 자동차의 외관, JavaScript는 자동차의 동력이라고 볼 수 있다.
@@ -31,25 +48,39 @@
     <br>햄이랑 햄스터가 다르고 파와 파슬리가 다르며, 인도가 인도네시아와 다르듯 심지어는 웹 서버용 파생 규격도 다르다.</p>
 
     <p>자바스크립트의 언어로서 oneclick="~"는 JavaScript만의 명령어로서 alert와 결합이 가능하다. alert는 경고창으로서의 의미를 가진다
-    또한 input type="text"를 사용하면 빈칸에 채워넣을수 있는 박스가 등장한다~~ 밑에 예시처럼!</p>
+    또한 input type="text"를 사용하면 빈칸에 채워넣을수 있는 박스가 등장한다~~ 밑에 예시처럼!
+    <br><h4>조건문에 대한 것들</h4>
+    02.21 조건문
+    <br>JavaScript의 if 조건문과 비교연산자의 결과물인 분리연에 대해 알아보자
+    <br>
 
+    </p>
+  </div>
+  <div id="judo2">
+    <h2>제목2</h2>
+    이번에는 뭘 써볼가
+  </div>
 </div>
-
 </body>
 </html>
 
-<!--css
+
+CSS
 
 body{
-   
+   color:black;
+   margin:4px;
 }
 h1{
     font-size:45px;
     color: solid black;
     text-align: center;
-    border-bottom: 3px solid gray;
+    border-bottom: 2px solid gray;
     margin: 0;
     padding : 30px;
+}
+h2{
+    margin: 0;
 }
 #nightmode{
     font-size: 5px;
@@ -61,10 +92,42 @@ h1{
     padding:20px;
     
 }
-.judo{
-    font-size:15px;
+/* 여기가 박스를 나누는 구간이다. grid-template-columns*/
+#base{
+    display: grid;
+    grid-template-columns: 150px 2fr;
     border-bottom: 2px solid gray;
-    border-right: 2px solid gray;
-    border-left: 2px solid gray;
+}
+/* 여기까지 박스를 나누는 구간 */
+#base #judo{
+    
+    font-size:15px;
+ 
     padding:20px;
-}->
+    padding-left: 35px;
+    width: 500px;
+    
+}
+#base #judo2{
+    
+    font-size:15px;
+    padding:20px;
+    padding-left: 35px;
+    width: 500px;
+    
+}
+#base ol{
+    
+    border-right:2px solid gray;
+    border-left:2px solid gray;
+    margin:0;
+    padding:30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 100px
+}
+
+a{
+    color:black;
+
+}
