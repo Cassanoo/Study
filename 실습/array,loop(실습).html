@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="array,loop(실습).css">
+    <script>
+        function nightmode(self) {
+        var target = document.querySelector('body');
+        if (self.value === 'nightmode') {
+        target.style.backgroundColor = 'black';
+        target.style.color = 'white';
+        self.value = 'daymode';
+
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while (i < alist.length) {
+        alist[i].style.color = 'white';
+        i = i + 1;
+        }
+    } else {
+        target.style.backgroundColor = 'white';
+        target.style.color = 'black';
+        self.value = 'nightmode';
+        var alist = document.querySelectorAll('a');
+        var i = 0;
+        while (i < alist.length) {
+        alist[i].style.color = 'black';
+        i = i + 1;
+        }
+    }
+}
+    </script>
+</head>
+<body>
+    <h1><a href="홈.html">WEB</a></h1>
+    <!-- 개념적으로 하나 하나 풀어서 이해해보자면,
+    1. nightmode라는 id를 가진 버튼의 이름은 value 이고, 이것을 클릭하였을때,
+    var target은 이 문서상의 body태그의 전체를 가진 이후
+    만약 이것의 이름이 nightmode 일 시에 이 버튼을 클리하게되면, target의 body 부분의 백그라운드,폰트 컬러가 바뀌게 되고,
+    value가 daymode로 변화하게 된다.
+    또한 var 의 alist는 'a'의 모든 부분을 선택하고
+    var i = 숫자 0임과 동시에
+    i는 이 'a'의 모든 글을 읽을 때 까지 반복재생되게 되며 폰트 컬러또한 변경된다. -->
+    <input id="nightmode" type="button" value="nightmode" onclick="
+    nightmode(this);">
+
+    <div id="link">
+        <div class ="script">
+            <script>
+                var coworker =['home','html','css','javascripts','study']
+                i = 0;
+                while(i< coworker.length){
+                document.write('<li><a href="https://www.google.com/"+coworkers[i]+>'+coworker[i]+'</a></li>')
+                i = i + 1;}
+            </script>
+        </div>
+        <div class ="ancholr">
+            <ol>
+                <a href="index.html"> <li><strong>Home</strong></li></a>
+                <a href="1.html"><li>HTML</li></a>
+                <a href="2.html"><li>Css</li></a>
+                <a href="(ex)javascript.html"><li>JavaScripts</li></a>
+                <a href="coding Study.html"><li>공부 요약본</li></a>
+            </ol>
+        </div>
+    </div>
+    fucking helll
+</body>
+</html>
